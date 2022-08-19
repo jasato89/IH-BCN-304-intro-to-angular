@@ -1,0 +1,10 @@
+<h1>{{name}}</h1>
+<h2>{{formattedDate}}</h2>
+<h3 [ngStyle]="{'background-color' : color}">{{subtitle}}</h3>
+
+
+<button (click)="updateTitle()" [disabled]="isDisabled">I am a button</button>
+<input (keyup)="getStyle()" [placeholder]="inputPlaceholder" type="text" [(ngModel)]="subtitle">
+<p *ngIf="isInputEmpty()">No has añadido ningún texto</p>
+<img [src]="image" alt="">
+<p (copy)="enableButton()">Copiame para habilitar los botones</p>
